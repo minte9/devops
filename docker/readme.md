@@ -1,4 +1,4 @@
-## DevOps / Docker
+## Docker
 
 ### VPS Setup
 
@@ -10,10 +10,10 @@
 
 - Apache Setup
 - PHP Apache
-- Image VPS transfer
+- Image transfer (VPS)
 
 ### Docker Compose
 
-- YML file `docker-compose.yml` (in project/ root)
-- Build with `docker compose`
-- Files transfer on VPS (not image) with `rsync` or `scp`
+- `docker-compose.yml`
+- `docker compose build`
+- `rsync` or `scp` file tranfer
