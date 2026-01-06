@@ -194,8 +194,7 @@ Use rsync not scp.
 
 Test:
 
-    http://your-ip-vps:8081/
-    
+    http://minte9.cloud:8081/
     OK!
 
 
