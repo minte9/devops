@@ -79,10 +79,10 @@ What this does:
 - Start MySQL before Apach      | depends_on
 - MySQL not exposed publicly    | no ports for DB
 
-🔒 MySQL is only accessible inside Docker networkd
+🔒 MySQL is only accessible inside Docker network
 
 
-### 📌 Start everything
+## Start everything
 
     docker compose up -d --build
 
@@ -127,5 +127,5 @@ Create app/src/db_test.php
 Open:
 
     http://localhost:8081/db_test.php
-    
+
     ✅ Connected to MySQL successfully!
