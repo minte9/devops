@@ -82,7 +82,7 @@ What this does:
 🔒 MySQL is only accessible inside Docker network
 
 
-## Start everything
+### 📌 Start everything
 
     docker compose up -d --build
 
