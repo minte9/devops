@@ -1,4 +1,4 @@
-## Mysql
+## Mysql with Docker
 
 - You do NOT need to install MySQL on the server anymore.
 - MySQL will run inside its own container, completely isolated.
@@ -8,7 +8,7 @@ Your VPS will only have:
 - Docker
 - Docker Compose
 
-### Project Structure
+### 📌 Project Structure
 
     mysql_project/
     ├── docker-compose.yml
@@ -19,7 +19,7 @@ Your VPS will only have:
     │       ├── index.php
     │       └── db_test.php
 
-### Dockerfile
+### 📌 Dockerfile
 
     FROM php:8.2-apache
 
@@ -37,7 +37,7 @@ Your VPS will only have:
     COPY src/ /var/www/html/
 
 
-### Docker Compose
+### 📌 Docker Compose
 
 Update docker-compose.yml
 
@@ -81,7 +81,8 @@ What this does:
 
 🔒 MySQL is only accessible inside Docker networkd
 
-### Start everything
+
+### 📌 Start everything
 
     docker compose up -d --build
 
@@ -102,7 +103,7 @@ What this does:
         2026-01-06 14:28:35+00:00 [Note] [Entrypoint]: Initializing database files
         ...
 
-### Test database connection
+### 📌 Test database connection
 
 Create app/src/db_test.php
 
@@ -118,7 +119,7 @@ Create app/src/db_test.php
             $user,
             $pass
         );
-        echo "Connected to MySQL successfully!";
+        echo "✅ Connected to MySQL successfully!";
     } catch (PDOException $e) {
         echo "❌ Connection failed: " . $e->getMessage();
     }
@@ -126,5 +127,5 @@ Create app/src/db_test.php
 Open:
 
     http://localhost:8081/db_test.php
-
-    Connected to MySQL successfully!
+    
+    ✅ Connected to MySQL successfully!
