@@ -14,6 +14,6 @@
 
 ### Docker Compose
 
-- `docker-compose.yml`
-- `docker compose build`
-- `rsync` or `scp` file tranfer
+- YML file
+- Docker compose build
+- Files transfer (VPS)
