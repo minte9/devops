@@ -104,19 +104,10 @@ This replaces shared hosting’s hidden Apache config.
 
     <?php
     // DB connect
-    if (file_exists('/.dockerenv')) {
-        // Docker
-        define ('_DB_HOST', 'db');
-        define ('_DB_DATABASE', 'app_db');
-        define ('_DB_USERNAME', 'app_user');
-        define ('_DB_PASSWORD', 'app_pass');
-    } else {
-        // Shared hosting
-        define ('_DB_HOST', 'localhost');
-        define ('_DB_DATABASE', 'minte9_refresh_v2');
-        define ('_DB_USERNAME', 'admin');
-        define ('_DB_PASSWORD', 'password');
-    }
+    define ('_DB_HOST', 'db'); // Docker
+    define ('_DB_DATABASE', 'app_db');
+    define ('_DB_USERNAME', 'app_user');
+    define ('_DB_PASSWORD', 'app_pass');
 
 
 ### Build and Start
