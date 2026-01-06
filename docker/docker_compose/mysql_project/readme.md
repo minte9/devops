@@ -1,4 +1,4 @@
-## Mysql with Docker
+# Mysql with Docker
 
 - You do NOT need to install MySQL on the server anymore.
 - MySQL will run inside its own container, completely isolated.
