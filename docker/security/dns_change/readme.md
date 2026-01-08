@@ -58,6 +58,19 @@ Some ISPs:
 - Cannot be flushed client-side
 - Nothing is broken.
 
+
 ### What you can do right now
   
-Temporarily edit `/etc/hosts`:
+Temporarily edit `/etc/hosts`
+
+    sudo nano /etc/hosts
+
+
+### Errors (if any)
+
+Error response from daemon: network.
+
+    docker compose down
+    docker network prune
+    docker system prune
+    docker compose up -d
