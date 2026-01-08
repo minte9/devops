@@ -1,0 +1,21 @@
+services:
+  traefik:
+    image: traefik:v3.0
+    container_name: traefik
+    ports:
+        - "80:80"
+        - "443:443"
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+        - ./traefik/traefik.yml:/traefik.yml:ro
+        - ./traefik/acme.json:/acme.json
+    command:
+        - "--configFile=/traefik.yml"
+    restart: unless-stopped
+
+  web:
+    labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.zend.rule=Host(`refresh.local`)"
+        - "traefik.http.routers.zend.entrypoints=websecure"
+        - "traefik.http.routers.zend.tls.certresolver=letsencrypt"

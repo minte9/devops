@@ -14,6 +14,9 @@
 
 ### Docker Compose
 
-- YML file
-- Docker compose build
-- Files transfer (VPS)
+- Apache + PHP project (yml)
+- Mysql project 
+- Project migration (rsync)
+
+### SLL with Traefix
+
