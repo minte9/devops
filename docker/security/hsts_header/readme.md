@@ -80,10 +80,10 @@ Now attach it to the HTTPS router:
                     scheme: https
 
             hsts:
-            headers:
-                stsSeconds: 31536000        # 1 year
-                stsIncludeSubdomains: true
-                stsPreload: false
+                headers:
+                    stsSeconds: 31536000        # 1 year
+                    stsIncludeSubdomains: true
+                    stsPreload: false
 
         services:
             zend:

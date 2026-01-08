@@ -18,5 +18,8 @@
 - Mysql project 
 - Project migration (rsync)
 
-### SLL with Traefix
+### Security
 
+- SLL with Traefix
+- HSTS
+- DNS migration
