@@ -144,7 +144,43 @@ Insteed of copying the image and restarting the container, we simple just transf
     scp -r apache_php catalin@72.62.152.27:/srv/docker/
 
 
-### LOGS 
+### 📌 COMPOSER (PHP)
+
+Install Composer in the Docker image.  
+
+Dockerfile
+
+    FROM php:8.2-apache
+
+    # System deps
+    RUN apt-get update && apt-get install -y 
+        git unzip curl \
+        && rm -rf /var/lib/apt/lists/*
+
+    # Install Composer
+    COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+    # PHP extensions
+    RUN docker-php-ext-install pdo pdo_mysql
+
+    WORKDIR /var/www/html
+
+Rebuild container.
+
+    docker compose build --no-cache
+    docker compose up -d
+
+Install library (hybridauth) INSIDE container.
+
+    docker exec -it zend-apache sh
+    cd /var/www/html/Application/library
+    composer require hybridauth/hybridauth
+
+    php -r "require 'vendor/autoload.php'; var_dump(class_exists('Hybridauth\\Hybridauth'));"
+    bool(true)
+
+
+### 📌 LOGS 
 
     docker logs -f my-apache-php
 

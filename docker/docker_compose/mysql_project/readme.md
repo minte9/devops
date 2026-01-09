@@ -176,3 +176,10 @@ docker-compose.yml
 
     volumes:
     - ./mysql/init:/docker-entrypoint-initdb.d
+
+
+### Connect directly into a MySQL container
+
+
+    docker exec -it zend-mysql mysql -u app_user -p
+    app_pass
