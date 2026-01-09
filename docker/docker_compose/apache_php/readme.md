@@ -144,7 +144,7 @@ Insteed of copying the image and restarting the container, we simple just transf
     scp -r apache_php catalin@72.62.152.27:/srv/docker/
 
 
-### LOGS
+### LOGS 
 
     docker logs -f my-apache-php
 
