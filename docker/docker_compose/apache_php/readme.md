@@ -142,3 +142,16 @@ Insteed of copying the image and restarting the container, we simple just transf
 
     (docker compose - better)
     scp -r apache_php catalin@72.62.152.27:/srv/docker/
+
+
+### LOGS
+
+    docker logs -f my-apache-php
+
+    docker logs --tail 100 -f my-apache-php
+
+Last N requests per distinct IP (Apache-style logs):
+
+    docker logs -f zend-apache \
+        | awk '{print $1, $0}' \
+        | awk '{ip=$1; count[ip]++; if (count[ip] <= 3) print}'

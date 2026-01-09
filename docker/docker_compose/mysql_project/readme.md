@@ -129,3 +129,50 @@ Open:
     http://localhost:8081/db_test.php
 
     ✅ Connected to MySQL successfully!
+
+
+## MySQL dump
+
+Firewall is enabled (MySQL port not opened - 3306).
+
+    sudo ufw enable
+    sudo ufw status verbose
+
+MySQL dump PROD - LOCAL flow:
+
+    MySQL (Docker, private)
+        ↓ mysqldump (with password OK)
+    backup.sql on VPS
+        ↓ scp (SSH)
+    backup.sql locally
+        ↓ docker exec mysql < backup.sql
+    Local MySQL updated
+
+### 📌 Dump with password
+
+    docker exec mysql-db mysqldump -u app_user -papp_pass app_db > backup.sql
+
+Use this on VPS to avoid locks:
+
+    docker exec mysql-db mysqldump -u app_user -papp_pass \
+      --single-transaction --quick --lock-tables=false \
+       app_db > backup.sql
+
+
+### 📌 Download backup.sql from VPS
+
+From your local machine, run:
+
+    scp catalin@72.62.152.27:/db/backup.sql ./db/backup.sql
+
+- Encrypted
+- Fast
+- No extra services needed
+
+
+### 📌 Auto-import on container start
+
+docker-compose.yml
+
+    volumes:
+    - ./mysql/init:/docker-entrypoint-initdb.d

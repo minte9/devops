@@ -74,3 +74,14 @@ Error response from daemon: network.
     docker network prune
     docker system prune
     docker compose up -d
+
+### Local SSH connections
+
+Removes the old associations only from your local machine.
+
+    ssh-keygen -R 72.62.152.27
+    ssh-keygen -R minte9.com
+
+Then reconnect:
+
+    ssh catalin@minte9.com
