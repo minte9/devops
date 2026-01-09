@@ -14,7 +14,7 @@
 
 ### Docker Compose
 
-- Apache + PHP project (yml)
+- Apache + PHP project (yml), Composer
 - Mysql project 
 - Project migration (rsync)
 
