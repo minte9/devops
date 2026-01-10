@@ -108,7 +108,7 @@ Remove all stopped containers:
         185acec7101f   my-apache:1.0   "httpd-foreground"   2 seconds ago   Up 1 second   0.0.0.0:8081->80/tcp, :::8081->80/tcp   apache-test
 
 
-### Docker Composer (to do later)
+### Docker Compose (to do later)
 
 Compose automatically:
 
