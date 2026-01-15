@@ -27,10 +27,30 @@ Stop, remove:
     docker rm apache-test
 
 
-### Docker Image vs Container
+### Docker Image
 
-A Docker Image is a read-only blueprint (like a class in programming).  
-Images do nothing by themselves.  
+A Docker Image is a read-only blueprint (like a class in programming).   
+Images do nothing by themselves.   
+
+    docker build -t my-apache:1.0 .
+
+    This:
+    - Reads you Dockerfile
+    - Creates an image
+    - Stores it in Docker's image cache
+
+
+### Docker Container
+
+A container is a running (or stopped) instance of an image (like an object from a class).  
+
+    docker run -d --name web1 my-apache:1.0
+
+    This:
+    - Creates a container from the image
+    - Starts Apache
+    - Exposes ports
+    - Uses memory & CPU
 
 ## Custom Apache Image / my-apache:1.0
 
