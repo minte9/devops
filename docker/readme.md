@@ -24,3 +24,4 @@
 - SLL with Traefix
 - HSTS
 - DNS migration
+- DNS subdomains (traefik)
