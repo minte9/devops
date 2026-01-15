@@ -24,7 +24,7 @@ Add / update `www` subdomain
     Name: www
     Value: minte9.com
 
-### WAIT for DNS propagatio
+### WAIT for DNS propagation
 
 First the `dig` will respond with old IP and nameservers).
 
