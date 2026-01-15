@@ -183,6 +183,11 @@ Use rsync not scp.
     zend-mysql    mysql:8.0          "docker-entrypoint.s…"   db        8 seconds ago   Up 7 seconds   3306/tcp, 33060/tcp
 
 
+### DB initialization
+
+   sudo docker exec -i catarare-mysql mysql -u app_user -papp_pass app_db < db/backup.sql
+
+
 Test:
 
     http://minte9.cloud:8081/

@@ -3,8 +3,8 @@
 ### VPS Setup
 
 - Initial Setup
-- Hardening
 - Webserver Simple
+- Hardening
 
 ### Docker Image
 

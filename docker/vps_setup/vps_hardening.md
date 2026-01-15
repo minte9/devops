@@ -31,7 +31,7 @@
 
 ### Hide Apache version
 
-Hide Apache version (inside container), in apache config:
+Hide Apache version (inside container), in Apache config:
 
     ServerTokens Prod
     ServerSignature Off
@@ -44,7 +44,7 @@ Very effective against noisy bots.
 
 By default, ufw limit means:
 
-    - Allows up to 6 new conenctions
+    - Allows up to 6 new connections
     - Withing 30 seconds
     - Per source IP
     - If exceeded -> that IP is temprorary blocked from connecting to port 80
