@@ -51,14 +51,13 @@
         CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                                   NAMES
         c4071f3e0324   project_apache_php-web   "docker-php-entrypoi…"   3 seconds ago   Up 2 seconds   0.0.0.0:8081->80/tcp, :::8081->80/tcp   my-apache-php
 
-What it does:
-
+    This
     - Builds your custom image
     - Starts the container
     - Mounts your code as volume
     - Runs in background
 
-Change PHP code:
+Test by changing something in PHP code:
 
     - No rebuild
     - No restart
@@ -68,8 +67,7 @@ Change PHP code:
 
     docker compose down
 
-This:
-
+    This:
     - Stop containers
     - Removes containers
     - Keep images & volumes
