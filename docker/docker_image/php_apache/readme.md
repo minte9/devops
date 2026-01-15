@@ -1,4 +1,4 @@
-## PHP with APACHE - Docker Image
+## PHP with APACHE (Image)
 
 What we are building:
 
