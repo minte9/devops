@@ -27,6 +27,10 @@ Stop, remove:
     docker rm apache-test
 
 
+### Docker Image vs Container
+
+A Docker Image is a read-only blueprint (like a class in programming).  
+Images do nothing by themselves.  
 
 ## Custom Apache Image / my-apache:1.0
 
