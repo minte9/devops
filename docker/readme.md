@@ -21,7 +21,7 @@
 
 ### Security
 
-- SLL with Traefix
+- TLS with Traefix
 - HSTS
 - DNS migration
 - DNS subdomains (traefik)
