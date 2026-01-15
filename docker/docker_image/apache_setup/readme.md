@@ -27,8 +27,6 @@ Stop, remove:
     docker rm apache-test
 
 
-<br><br>
-
 
 ## Custom Apache Image / my-apache:1.0
 
