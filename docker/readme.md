@@ -10,7 +10,7 @@
 
 - Install Docker
 - Image transfer (VPS)
-- Apache (image)
+- Apache Image
 - PHP Apache (image)
 
 ### Docker Compose
